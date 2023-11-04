@@ -1,7 +1,7 @@
 extends Sprite2D
 
 var positionOne: Vector2 = Vector2.ZERO
-const speed: int = 1
+const speed: int = 200
 var test_scale: int = 1
 
 func _ready():
@@ -15,7 +15,7 @@ func _ready():
 	scale = Vector2(test_scale, test_scale)
 
 func _process(delta):
-	positionOne.x += speed
+	positionOne.x += speed * delta
 	position = positionOne
 	
 	#test_scale += 0.1
